@@ -34,7 +34,7 @@ const PostModal = ({ setPostModal }) => {
       .catch((err) => toast.error("Ops!! Algo deu errado."));
   };
 
-  console.log(token);
+  // console.log(token);
 
   return (
     <motion.div
