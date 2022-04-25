@@ -29,7 +29,7 @@ p:hover {
 }
 `;
 
-export const styledButton = styled.button`
+export const StyledButton = styled.button`
 background-color: rgba(0, 0, 0, 0);
   color: var(--grey-0);
   border: 0;

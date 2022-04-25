@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-import { Container, styledButton } from "./styles";
+import { Container, StyledButton } from "./styles";
 
 import api from "../../services/api";
 
@@ -28,9 +28,9 @@ const Card = ({ status, title, id, setItemToChange, setModalPut }) => {
       <p id={id} onClick={showModal}>
         {status}
       </p>
-      <styledButton onClick={(event) => deleteItem(event.target.id)} id={id}>
+      <StyledButton onClick={(event) => deleteItem(event.target.id)} id={id}>
         X
-      </styledButton>
+      </StyledButton>
     </Container>
   );
 };

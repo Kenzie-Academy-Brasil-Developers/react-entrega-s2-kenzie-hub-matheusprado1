@@ -2,7 +2,7 @@ import { Redirect, useHistory } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-import styledHome from "./styles";
+import StyledHome from "./styles";
 import Button from "../../components/button";
 
 import logo from "../../assets/logo.png";
@@ -29,7 +29,7 @@ const Home = ({ auth }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      <styledHome>
+      <StyledHome>
         <img src={logo} alt="kenzie-hub" />
         <h1>Seja Bem Vindo!</h1>
         <div>
@@ -38,7 +38,7 @@ const Home = ({ auth }) => {
             Cadastre-se
           </Button>
         </div>
-      </styledHome>
+      </StyledHome>
     </motion.div>
   );
 };

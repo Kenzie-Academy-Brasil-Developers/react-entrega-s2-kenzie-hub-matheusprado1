@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const styledHeader = styled.header`
+export const StyledHeader = styled.header`
   width: 100%;
   height: 72px;
   display: flex;
@@ -22,7 +22,7 @@ export const styledHeader = styled.header`
   }
 `;
 
-export const styledButton = styled.button`
+export const StyledButton = styled.button`
   width: 55px;
   height: 32px;
   background-color: var(--grey-3);

@@ -1,11 +1,11 @@
-import styledButton from "./styles";
+import StyledButton from "./styles";
 
 const Button = ({ children, register, onClick }) => {
   return (
     <>
-     <styledButton onClick={onClick} register={register}>
+     <StyledButton onClick={onClick} register={register}>
          {children}
-     </styledButton>
+     </StyledButton>
     </>
   );
 };

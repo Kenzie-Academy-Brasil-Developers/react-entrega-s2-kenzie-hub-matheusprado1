@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin-top: 5px;
 `;
 
-export const styledInput = styled.input`
+export const StyledInput = styled.input`
   width: 264px;
   height: 39px;
   background-color: var(--grey-2);

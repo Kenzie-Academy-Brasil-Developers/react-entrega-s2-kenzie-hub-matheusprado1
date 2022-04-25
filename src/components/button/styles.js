@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const styledButton = styled.button`
+const StyledButton = styled.button`
 width: 100%;
 height: 40px;
 color: var(--grey-0);
@@ -18,4 +18,4 @@ font-size: 16px;
 }
 `;
 
-export default styledButton;
+export default StyledButton;
