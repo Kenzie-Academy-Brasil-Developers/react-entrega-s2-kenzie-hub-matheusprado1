@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const styleHome = styled.div`
+const styledHome = styled.div`
   width: 310px;
   heigth: 330px;
 
@@ -25,4 +25,4 @@ const styleHome = styled.div`
     align-items: center;
   }
 `;
-export default styleHome;
+export default styledHome;
