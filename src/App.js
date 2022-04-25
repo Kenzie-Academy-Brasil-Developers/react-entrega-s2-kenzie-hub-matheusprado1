@@ -1,8 +1,6 @@
+import GlobalStyles from "./GlobalStyles";
 import "./App.css";
-
-import GlobalStyles from "./globalStyles";
 import Routes from "./routes";
-
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
@@ -20,9 +18,9 @@ function App() {
         draggable
         pauseOnHover
       />
-      <ToastContainer/>
-      <GlobalStyles/>
-      <Routes/>
+      <ToastContainer />
+      <GlobalStyles />
+      <Routes />
     </div>
   );
 }
