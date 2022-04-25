@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 
 import { Container, StyledButton } from "./styles";
 
-import api from "../../services/api";
+import api from "../../Services/";
 
 const Card = ({ status, title, id, setItemToChange, setModalPut }) => {
   const token = JSON.parse(localStorage.getItem("@kenzieHub:token"));

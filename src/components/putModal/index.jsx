@@ -1,9 +1,9 @@
 import { Modal, StyledButton } from "./styles";
 
-import Button from "../Button";
-import Input from "../Input";
+import Button from "../button";
+import Input from "../input";
 
-import api from "../../Services/api";
+import api from "../../Services";
 
 import { useState } from "react";
 

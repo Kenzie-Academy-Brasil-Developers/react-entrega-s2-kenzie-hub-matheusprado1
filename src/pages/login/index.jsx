@@ -3,14 +3,14 @@ import Button from "../../components/button";
 
 import logo from "../../assets/logo.png";
 
-import { Container, StyledForm } from "../../components/input/styles";
+import { Container, StyledForm } from "./styles";
 
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Redirect } from "react-router-dom";
 
-import api from "../../services/api";
+import api from "../../Services";
 
 const Login = ({ setAuth, auth }) => {
     const history = useHistory();

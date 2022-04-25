@@ -1,9 +1,9 @@
 import { Container, Tecs, StyledButton } from "./styles";
 
-import Card from "../../Components/Card";
-import Header from "../../Components/Header";
-import ModalPost from "../../Components/ModalPost";
-import ModalPut from "../../Components/ModalPut";
+import Card from "../../components/card";
+import Header from "../../components/header";
+import ModalPost from "../../components/postModal";
+import ModalPut from "../../components/putModal";
 
 import { Redirect } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 
-import api from "../../Services/api";
+import api from "../../Services";
 
 
 const Dashboard = ({ auth, setAuth }) => {

@@ -3,7 +3,7 @@ import { Modal, StyledButton } from "./styles";
 import Button from "../button";
 import Input from "../input";
 
-import api from "../../services/api";
+import api from "../../Services";
 
 import { useState } from "react";
 

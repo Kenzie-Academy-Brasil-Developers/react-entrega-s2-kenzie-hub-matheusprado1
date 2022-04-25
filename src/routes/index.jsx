@@ -4,6 +4,11 @@ import { AnimatePresence } from "framer-motion";
 
 import { useState, useEffect } from "react";
 
+import Home from "../pages/home";
+import Login from "../pages/login";
+import Register from "../pages/register";
+import Dashboard from "../pages/dashboard";
+
 const Routes = () => {
   const [auth, setAuth] = useState(false);
 
@@ -15,24 +20,24 @@ const Routes = () => {
     }
   }, [auth]);
 
-  return(
-      <AnimatePresence>
-          <Switch>
-              <Route exact path="/">
-
-              </Route>
-              <Route path="/register">
-
-              </Route>
-              <Route path ="/login">
-
-              </Route>
-              <Route path="/dashboard">
-
-              </Route>
-          </Switch>
-      </AnimatePresence>
-  )
+  return (
+    <AnimatePresence>
+      <Switch>
+        <Route exact path="/">
+          <Home auth={auth} />
+        </Route>
+        <Route path="/register">
+          <Register auth={auth} />
+        </Route>
+        <Route path="/login">
+          <Login auth={auth} setAuth={setAuth} />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard auth={auth} setAuth={setAuth} />
+        </Route>
+      </Switch>
+    </AnimatePresence>
+  );
 };
 
 export default Routes;
