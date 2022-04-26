@@ -11,10 +11,6 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
 const PutModal = ({ setModalPut, itemToChange }) => {
-  const close = () => {
-    return setModalPut(false);
-  };
-
   const [token] = useState(
     JSON.parse(localStorage.getItem("@kenzieHub:token")) || ""
   );
@@ -36,8 +32,8 @@ const PutModal = ({ setModalPut, itemToChange }) => {
     <>
       <Modal>
         <div>
-          <h4>Editar tecnologia</h4>
-          <StyledButton onClick={close}> x </StyledButton>
+          <h4>Atualizar Tecnologia</h4>
+          <StyledButton onClick={() => setModalPut(false)}> x </StyledButton>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
@@ -46,7 +42,8 @@ const PutModal = ({ setModalPut, itemToChange }) => {
             placeholder="Atualize seu progresso"
             label="Status"
           />
-          <Button type="submit">Atualizar tecnologia</Button>
+          <Button type="submit">Salvar Alterações</Button>
+          <Button onClick={() => setModalPut(false)}>Voltar</Button>
         </form>
       </Modal>
     </>

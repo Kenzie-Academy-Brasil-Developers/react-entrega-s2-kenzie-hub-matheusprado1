@@ -2,6 +2,9 @@ import { toast } from "react-toastify";
 
 import { Container, StyledButton } from "./styles";
 
+import { MdDeleteForever } from "react-icons/md";
+import { AiFillEdit } from "react-icons/ai";
+
 import api from "../../Services/";
 
 const Card = ({ status, title, id, setItemToChange, setModalPut }) => {
@@ -10,7 +13,7 @@ const Card = ({ status, title, id, setItemToChange, setModalPut }) => {
   const deleteItem = (buttonId) => {
     api
       .delete(`/users/techs/${buttonId}`, {
-        headers: { Authorization: `Bearer${token}` },
+        headers: { Authorization: `Bearer ${token}` },
       })
       .then((_) => {
         toast.success("Tecnologia deletada").catch((err) => console.log(err));
@@ -25,11 +28,12 @@ const Card = ({ status, title, id, setItemToChange, setModalPut }) => {
   return (
     <Container>
       <h3>{title}</h3>
+
       <p id={id} onClick={showModal}>
-        {status}
+        {status} <AiFillEdit/>
       </p>
       <StyledButton onClick={(event) => deleteItem(event.target.id)} id={id}>
-        X
+        <MdDeleteForever />
       </StyledButton>
     </Container>
   );

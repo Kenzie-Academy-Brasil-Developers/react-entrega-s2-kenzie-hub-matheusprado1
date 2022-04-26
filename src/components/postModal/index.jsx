@@ -12,10 +12,7 @@ import { useForm } from "react-hook-form";
 
 import { motion } from "framer-motion";
 
-const PostModal = ({ setPostModal }) => {
-  const close = () => {
-    return setPostModal(false);
-  };
+const PostModal = ({setModalPost}) => {
 
   const [token] = useState(
     JSON.parse(localStorage.getItem("@kenzieHub:token")) || ""
@@ -32,9 +29,11 @@ const PostModal = ({ setPostModal }) => {
         toast.success("Tecnologia cadastrada");
       })
       .catch((err) => toast.error("Ops!! Algo deu errado."));
+      
   };
 
   // console.log(token);
+    
 
   return (
     <motion.div
@@ -47,7 +46,7 @@ const PostModal = ({ setPostModal }) => {
         <Modal>
           <div>
             <h4>Cadastrar tecnologia</h4>
-            <StyledButton onClick={close}> x </StyledButton>
+            <StyledButton onClick={()=>setModalPost(false)}> x </StyledButton>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Input
@@ -63,6 +62,7 @@ const PostModal = ({ setPostModal }) => {
               label="Status"
             />
             <Button type="submit">Cadastrar tecnologia</Button>
+            <Button onClick={()=>setModalPost(false)}>Voltar</Button>
           </form>
         </Modal>
       </>
